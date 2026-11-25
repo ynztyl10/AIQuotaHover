@@ -370,7 +370,7 @@ final class HoverStatusBarController: NSObject {
         for info in infoList {
             guard let pid = info[kCGWindowOwnerPID as String] as? pid_t, pid != myPID,
                   let layer = info[kCGWindowLayer as String] as? Int,
-                  layer >= 3 && layer < 1000,
+                  layer >= 1 && layer < 1000,
                   let boundsDict = info[kCGWindowBounds as String] as? NSDictionary
             else { continue }
 
