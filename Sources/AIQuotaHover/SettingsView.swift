@@ -43,7 +43,6 @@ struct InlineSettingsView: View {
             scan = LocalAppScanResult.scan()
             if let focus = viewModel.focusedProviderID {
                 expandedKeyID = focus
-                viewModel.onRequestKeyFocus?()
             }
         }
         .onDisappear {
